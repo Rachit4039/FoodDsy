@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" ></script>
+
+</head>
+<body class="">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>FoodDsy</h1>
+            </div>
+            <ul>
+                <li><a href="">HOME </a></li>
+                <li><a href="AboutUs.html">ABOUT US</a></li>
+                <!-- <li><a href="#gallery">SERVICES</a></li> -->
+                <li><a href="contactus.html">CONTACT US</a></li>
+            </ul>
+
+            <button class="b"><a href="index.html" class="login-btn">Logout</a></button>
+            <!-- End of login button -->
+            <div class="icons">
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <!-- <i class="fa-solid fa-person"></i>
+                 -->
+                 <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-bag-shopping">
+                <!-- <i id="bar" class="fa-solid fa-cart-shopping"></i> -->
+                    <span>0</span>
+                </i>
+            </div>
+        </div>
+        <div class="carTab">
+            <h1>My Cart</h1>
+            <div class="ListCart"></div>
+            <!-- display total amoutn -->
+            <div class="totalCart">
+                <span class="totalSpan">Total: ₹0</span> <!-- Total value of all items -->
+            </div>
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button class="total" onclick="window.location.href='checkout.html'">Move Ahead</button>
+            </div>
+        </div>
+        </nav>
+        <div class="main">
+            <div class="mainText">
+                <h1>FoodDsy A Place for all the foodies :)</h1>
+                <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+<p style="font-family: 'Roboto Slab', serif;">Welcome to <strong>THE FoodDsy</strong>, where every dish is a celebration of flavor and creativity. Nestled in the heart of <em>[Location]</em>, our culinary artisans craft each meal with passion and precision, sourcing only the freshest, locally-sourced ingredients to tantalize your taste buds. Whether you crave the comfort of classic favorites or the excitement of innovative cuisine, our menu offers a symphony of delicious options to satisfy every palate. Join us for an unforgettable dining experience, where exceptional service meets culinary excellence, creating memories one bite at a time.</p>
+
+
+            </div>
+            <img src="My first design 1.png" alt="">
+        </div>
+
+         
+        <div id="food">
+            <div class="head">
+                <h1>Menu</h1>
+            </div>
+            <div class="foodCard">
+                <div class="card" data-id="1">
+                    <img src="fd1.jpg" alt="">
+                    <p>Burger</p>
+                    <p>₹ 100</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="2">
+                    <img src="mexican-tacos-with-beef-beans-tomato-sauce-salsa.jpg" alt="">
+                    <p>Tacos</p>
+                    <p>₹ 75</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="3">
+                    <img src="fd3.jpg" alt="">
+                    <p>Pizza(Tomato and Corn)</p>
+                    <p>₹ 200</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="4">
+                    <img src="panini-sandwich-with-ham-cheese-tomato-arugula-black-slate-background.jpg" alt="">
+                    <p>Sandwich</p>
+                    <p>₹ 150</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="5">
+                    <img src="closeup-shot-chocolate-cake-wooden-table.jpg" alt="">
+                    <p>Choco Lava Cake</p>
+                    <p>₹ 200</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="6">
+                    <img src="cup-three-layered-coffee-dark.jpg" alt="">
+                    <p>Cappuccino</p>
+                    <p>₹ 100</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="7">
+                    <img src="fd5.jpg" alt="">
+                    <p>Brownie</p>
+                    <p>₹ 150</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="8">
+                    <img src="side-view-shawarma-with-fried-potatoes-board-cookware.jpg" alt="">
+                    <p>Veggie Roll</p>
+                    <p>₹ 150</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="9">
+                    <img src="freshly-cooked-meal-pork-rice-generated-by-ai.jpg" alt="">
+                    <p>Idli</p>
+                    <p>₹ 150</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="10">
+                    <img src="panipuri_gupchup_indian_food_0.jpg" alt="">
+                    <p>Golgappa(6 pieces)</p>
+                    <p>₹ 30</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="11">
+                    <img src="indian_sweet_gulab_jamun.jpg" alt="">
+                    <p>Gulab Gamun</p>
+                    <p>₹ 50</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+                <div class="card" data-id="12">
+                    <img src="delicious-asian-noodles-concept.jpg" alt="">
+                    <p>Chowmein</p>
+                    <p>₹ 70</p>
+                    <button class="add">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+<!-- 
+        <div id="restaurant">
+            <img src="restaurant.jpeg" alt="">
+        </div> -->
+
+        <!-- gallery -->
+        <div id="gallery">
+            <div class="head">
+                <h1>Our Gallery</h1>
+            </div>
+            <div class="gallery">
+                <img src="dewi-ika-putri-ZDD7O-grjBo-unsplash.jpg" alt="">
+                <img src="alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="">
+                <img src="piotr-szulawski-DCmUhk54F6M-unsplash.jpg" alt="">
+                <img src="caglar-araz-n_tX6yYBVjc-unsplash.jpg" alt="">
+                <img src="dave-photoz-Ksrmm0EHdgw-unsplash.jpg" alt="">
+                <img src="aditya-kulkarni-MjUlSiPRrfQ-unsplash.jpg" alt="">
+
+
+            </div>
+        </div>
+
+        <section id="contact-detail" class="section-p1">
+            <div class="detail">
+                <i class="far fa-clock"></i>
+                <span>Visit Us Today</span>
+                <h2>Open From 9.00 am to 11.30 pm</h2>
+                <h3>Open till 2.00 am on weekends</h3>
+                <div>
+                    <li>
+                        <i class="fal fa-map"></i>
+                        <p>Chitkara University Rajpura Patiala</p>
+                    </li>
+                    <li>
+                        <i class="fal fa-envelope"></i>
+                        <p>chitkara.be22@chitkara.edu.in</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <p>999888777</p>
+                    </li>
+            
+                </div>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.174971799957!2d76.65720287444542!3d30.516091096072522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1715367214762!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" ></iframe>
+            </div>
+
+        </section>
+
+        <div class="footer">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>Fresh Food</p>
+                <p>Quality</p>
+                <p>Affordable</p>
+                <p>Offers</p>
+            </div>
+            <div class="text">
+                <h2>Top Dishes</h2>
+                <p>Pizza</p>
+                <p>Burgers</p>
+                <p>Pizza</p>
+                <p>Sandwich</p>
+            </div>
+            <div class="text">
+                <h2>Offer</h2>
+                <p>50% OFF</p>
+                <p>Bulk Order</p>
+                <p>Coupans</p>
+                <p>offer</p>
+            </div>
+            <div class="text">
+                <h2>Connect on</h2>
+                <p>Twitter</p>
+                <p>Facebook</p>
+                <p>linkedIn</p>
+                <p>Instagram</p>
+            </div>
+        </div>
+     
+
+    </div>
+
+    <script src="Home.js"></script>
+</body>
+
+</html>
