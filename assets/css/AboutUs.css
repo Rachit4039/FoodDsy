@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Potta+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo 2", cursive;
+}
+
+body {
+    background-color: #f7f7f7; 
+}
+
+header {
+    background-color: #e6c651; 
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff; 
+    font-size: 36px; 
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto;
+    padding: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    height: 600px;
+    max-width: 1000px; 
+    background-color: #fff; 
+}
+
+.container img {
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+}
+
+.about-details {
+    margin: 0 45px;
+}
+
+.about-details span {
+    color: #eaaf4f; 
+    font-weight: bold;
+}
+
+.about-details h2 {
+    font-family: "Potta One";
+    font-weight: 100;
+    font-size: 36px; 
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.about-details p {
+    color: #666; 
+    font-size: 18px; 
+    line-height: 1.5; 
+}
+
+.btn {
+    margin: 25px 0; 
+    padding: 12px 24px; 
+    background-color: #ff5555; 
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #f2d12b; 
+}
