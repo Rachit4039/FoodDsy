@@ -29,12 +29,9 @@ body {
 
 .main {
   display: flex;
-  /* justify-content: space-around; */
   background: var(--beige);
   color: white;
-  height: 95vh;
-  /* clip-path: polygon(0 0, 100% 0, 100% 99%, 27% 78%, 47% 78%, 0 100%, 0 66%); */
-  /* clip-path: polygon(0 0, 100% 0, 100% 68%, 27% 78%, 27% 78%, 0 100%, 0 66%); */
+  height: fit-content;
 }
 
 .mainText {
@@ -71,6 +68,7 @@ nav {
   position: relative;
   justify-content: space-around;
   align-items: center;
+
   /* position: fixed; */
   top: 0%;
   width: 100%;
@@ -78,6 +76,37 @@ nav {
 
   height: 70px;
   /* box-shadow: 1px 3px 3px 3px rgb(216, 216, 216); */
+}
+
+.b {
+  font-size: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+}
+
+#gallery h1 {
+  text-align: center;
+  background: var(--beige);
+  color: var(--brown);
+}
+
+#gallery {
+  background: var(--beige);
+  padding: 4rem;
+}
+
+.carousel-inner {
+  height: 500px; /* Adjust this value as needed */
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area */
 }
 
 .head h1 {
@@ -88,14 +117,29 @@ nav {
   font-style: normal;
 }
 
+.head p {
+  color: var(--beige);
+  letter-spacing: 1px;
+}
+
 .foodCard,
 #food {
   background: var(--brown);
+  padding-bottom: 2rem;
 }
 
 nav ul li a {
   color: white;
   font-size: 1rem;
+}
+
+.carousel-inner .carousel-item img {
+  width: 10rem;
+}
+
+.map {
+  background: var(--brown);
+  padding-bottom: 3rem;
 }
 /* mehak end */
 
@@ -190,9 +234,9 @@ ul li a {
   background-color: #f19a16;
   color: white;
   border: none;
-  padding: 10px;
-  margin-bottom: 1rem;
-
+  width: fit-content;
+  /* padding: 10px; */
+  /* margin-bottom: 1rem; */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -229,6 +273,7 @@ ul li a {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  background: var(--beige);
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -277,7 +322,6 @@ footer {
   /* border-top-left-radius: 100px; */
   position: relative;
   width: 100%;
-  margin-top: 100px;
 }
 
 footer * {
@@ -586,15 +630,14 @@ body.showCart .carTab {
 }
 
 #contact-detail {
-  background-color: #e9d6d6;
-  border: 2px solid black;
-  margin-left: 120px;
+  /* background-color: #e9d6d6; */
+
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100px;
-  width: 1200px;
-  padding: 20px;
+
+  padding: 4rem;
 }
 #contact-detail .detail {
   width: 40%;
