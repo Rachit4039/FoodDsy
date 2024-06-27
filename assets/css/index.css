@@ -304,7 +304,7 @@ footer * {
 .footer-col h2 {
   font-optical-sizing: 1.7em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  padding-bottom: 1rem;
 }
 
 p.email {

@@ -270,24 +270,14 @@ ul li a {
   animation: clickEffect 0.3s;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
+#gallery {
   background: var(--beige);
-  justify-content: center;
-  flex-wrap: wrap;
 }
-.gallery img {
-  margin-inline: 6px;
-  margin-top: 12px;
+
+#gallery h1 {
+  padding-bottom: 1rem;
 }
-.gallery img:hover {
-  box-shadow: 2px 5px 6px 5px gray;
-}
-.gallery img {
-  width: 360px;
-  height: 240px;
-}
+
 .blogs {
   display: flex;
   flex-wrap: wrap;
@@ -341,7 +331,8 @@ footer * {
 .footer-col h2 {
   font-optical-sizing: 1.7em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+
+  padding-bottom: 1rem;
 }
 
 p.email {
