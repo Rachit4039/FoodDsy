@@ -1,66 +1,196 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    background-image: url("../images/design\ image.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #e5f0ff);
+}
 
-.login-container {
-    width: 300px;
-    margin: 100px auto;
-    background-color: #fff;
+.container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-section, .right-section {
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url("../images/design\ image.webp");
-    background-size: cover;
-    background-position: center;
 }
 
-h1 {
+.left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white; /* Light Green */
     text-align: center;
+}
+
+.animated-heading {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #FFA500; /* Yellow */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
     margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.input-field {
+    padding: 12px 20px;
+    border: 2px solid #FFD700; /* Yellow */
+    border-radius: 90px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(248, 164, 103);
-    color: #fff;
+.input-field:focus {
+    border-color: #FFA500; /* Darker Yellow */
+}
+
+.submit-button {
+    background-color: #FFD700; /* Yellow */
     border: none;
-    border-radius: 5px;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 90px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
+.submit-button:hover {
+    background-color: #FFA500; /* Darker Yellow */
+    transform: scale(1.05);
 }
 
-.signup-link {
-    text-align: center;
-    margin-top: 10px;
+
+.right-section {
+    flex: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
 }
 
-.signup-link a {
-    color: #007bff;
+.transition-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.transition-image:first-child {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.blinking-cursor {
+    font-weight: 100;
+    font-size: 50px;
+    color: #FFD700; /* Yellow */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #FFD700; /* Yellow */
+    }
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1%;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.back-button:hover {
+    transform: scale(1.25);
+    color: #FFD700; /* Yellow */
+}
+.already-signed-up {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-decoration: none;
+    gap: 5px; /* Add some space between the text and the link */
+}
+a{
+    font-size: 14px;
+    color: #FFA500;  
+    text-decoration: none; 
+    display: inline-block;
 }
 
-.signup-link a:hover {
-    text-decoration: underline;
-}
+/* .already-signed-up span {
+    margin-bottom: 10px;
+    font-weight: 600;
+} */
+
+/* .already-signed-up a {
+    color: #FFA500; /* Yellow */
+    /* text-decoration: none;
+    font-weight: 600;
+    background-color: #E0FFD8;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: color 0.3s, background-color 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} */ 
+
+/* .already-signed-up a:hover {
+    color: white;
+    background-color: #FFA500; /* Darker Yellow */
+
+
