@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/login.css" />
-  </head>
-  <body>
-    <div class="login-container">
-      <h1>Login</h1>
-      <form id="loginForm">
-        <input type="text" placeholder="Username" id="username" />
-        <input type="password" placeholder="Password" id="password" />
-        <button type="submit">Login</button>
-      </form>
+    <link rel="stylesheet" href="assets/css/login.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <button class="back-button" onclick="window.location.href='index.html'"><img src="assets/images/backarrow.png" width="50px" height="50px"/></button>
+            <h1 class="animated-heading">FoodDsy<span class="blinking-cursor">|</span></h1>
+            <p class="description">
+                Welcome to FoodDsy, your ultimate destination for delicious food delivered right to your doorstep. Whether you're craving a quick snack, a hearty meal, or something sweet, FoodDsy connects you with the best local restaurants and eateries. With a few taps on your phone, you can explore a diverse menu, place your order, and enjoy hot, fresh food in no time.
+            </p>
+            <form id="loginForm" class="login-form">
+                <input type="text" id="username" placeholder="Username" class="input-field">
+                <input type="password" id="password" placeholder="Password" class="input-field">
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+            <p class="already-signed-up">
+                Not signed up? <a href="Signup.html">Sign In</a>
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="./assets/images/login_img1.jpg" alt="Delicious Food" class="transition-image">
+            <img src="./assets/images/login_img2.jpg" alt="Delicious Food" class="transition-image">
+            <img src="./assets/images/login_img3.jpg" alt="Delicious Food" class="transition-image">
+            <img src="./assets/images/login_img4.jpg" alt="Delicious Food" class="transition-image">
+            <img src="./assets/images/login_img5.jpg" alt="Delicious Food" class="transition-image">
+            <img src="./assets/images/login_img6.jpg" alt="Delicious Food" class="transition-image">
+            <img src="./assets/images/login_img7.jpg" alt="Delicious Food" class="transition-image">
+        </div>
     </div>
-    <div class="signup-link">
-      Don't have an account ? <a href="Signup.html">Sign Up</a>
-    </div>
-    <script src="assets/js/login.js"></script>
-  </body>
+
+    <script src="assets/js/login.js">
+    </script>
+</body>
 </html>
