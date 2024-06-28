@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
     <title>Checkout</title>
-    <link rel="stylesheet" href="assets/css/checkout_styles.css">
-</head>
+    <link rel="stylesheet" href="assets/css/checkout_styles.css" />
+  </head>
 
-<body>
-    
+  <body>
     <div class="container">
-        <h1>Checkout</h1>
-        <div class="delivery-option">
-            <label for="delivery-option">Select Delivery Option:</label>
-            <select name="delivery-option" id="delivery-option">
-                <option value="standard">Standard Delivery (Rs.5.00)</option>
-                <option value="express">Express Delivery (Rs.10.00)</option>
-            </select>
-        </div>
-        <button id="confirm-btn">Confirm Delivery Option</button>
-        <div id="result"></div>
+      <h1>Checkout</h1>
+      <div class="delivery-option">
+        <label for="delivery-option">Select Delivery Option:</label>
+        <select name="delivery-option" id="delivery-option">
+          <option value="standard">Standard Delivery (Rs.5.00)</option>
+          <option value="express">Express Delivery (Rs.10.00)</option>
+        </select>
+      </div>
+      <button id="confirm-btn">Confirm Delivery Option</button>
+      <div id="result"></div>
     </div>
     <script src="assets/js/checkout_script.js"></script>
-</body>
-
+  </body>
 </html>
