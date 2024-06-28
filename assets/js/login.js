@@ -1,31 +1,48 @@
+const images = document.querySelectorAll('.transition-image');
+        let currentImageIndex = 0;
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+        function showNextImage() {
+            images[currentImageIndex].style.opacity = 0;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.opacity = 1;
+        }
 
-   
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+        setInterval(showNextImage, 3000);
 
-    
-    var registeredUsers = JSON.parse(localStorage.getItem('users')) || [];
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
- 
-    var foundUser = registeredUsers.find(function(user) {
-        return user.username === username && user.password === password;
-    });
-    if (foundUser) {
-      
-        isLoggedIn = true;
-    
-        window.location.href = 'Home.html';
-    } else {
-        // 
-        var errorMessage = document.createElement('p');
-        errorMessage.textContent = 'Invalid username or password.';
-        errorMessage.style.color = 'red';
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
-    
-        var loginContainer = document.querySelector('.login-container');
-        loginContainer.appendChild(errorMessage);
-    }
-});
+            const registeredUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+            const foundUser = registeredUsers.find(user => user.username === username && user.password === password);
+
+            const loginContainer = document.querySelector('.login-form');
+
+            // Clear any previous error messages
+            const existingErrorMessage = loginContainer.querySelector('.error-message');
+            if (existingErrorMessage) {
+                existingErrorMessage.remove();
+            }
+
+            if (foundUser) {
+                // Set the login flag and redirect to Home page
+                isLoggedIn = true;
+                window.location.href = 'Home.html';
+            } else {
+                // Show error message
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = 'Invalid username or password.';
+                errorMessage.style.color = 'red';
+                errorMessage.classList.add('error-message');
+
+                loginContainer.appendChild(errorMessage);
+
+                // Remove the error message after 3 seconds
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 3000);
+            }
+        });
