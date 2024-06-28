@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
     <title>FoodDsy</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
@@ -13,58 +14,63 @@
 <body class="">
     <div class="container">
         <nav>
-            <div class="logo">
-                <img src="assets/images/logo_no_bg.png" alt="" style="height: 40px; width: 40px;">
-                <h1>Foodsy</h1>
+            <div class="logo" style="display: flex;">
+
+                <img src="./assets/images/favicon.png"  height="40rem" style="padding-left: 2rem;" alt="">
+                <h1>FoodDsy</h1>
             </div>
             <ul>
                 <li><a href="">HOME </a></li>
-                <li><a href="#">ABOUT US</a></li>
+                <li><a href="AboutUs.html">ABOUT US</a></li>
                 <!-- <li><a href="#gallery">SERVICES</a></li> -->
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="contactus.html">CONTACT US</a></li>
             </ul>
 
-            <a href="login.html" class="login-btn">Login</a>
+            <button class="b"><a href="index.html" class="login-btn">Log In</a></button>
             <!-- End of login button -->
             <div class="icons">
                 <!-- <i class="fa-solid fa-user"></i> -->
                 <!-- <i class="fa-solid fa-person"></i>
                  -->
-                 <i class="fa-regular fa-user"></i>
-                <i class="fa-solid fa-bag-shopping">
+                 <i class="fa-regular fa-user"  style="color: white;"></i>
+                <i class="fa-solid fa-bag-shopping"  style="color: white;">
                 <!-- <i id="bar" class="fa-solid fa-cart-shopping"></i> -->
                     <span>0</span>
                 </i>
             </div>
         </div>
         <div class="carTab">
-            <h1>Shopping Cart</h1>
+            <h1>My Cart</h1>
             <div class="ListCart"></div>
+            <!-- display total amoutn -->
             <div class="totalCart">
-                <h1>Total : </h1>
-                <span class="totalSpan"></span>
+                <span class="totalSpan">Total: ₹0</span> <!-- Total value of all items -->
             </div>
             <div class="btn">
                 <button class="close">CLOSE</button>
-                <button class="total" onclick="window.location.href='checkout.html'">Go Ahead</button>
+                <button class="total" onclick="window.location.href='checkout.html'">Move Ahead</button>
             </div>
         </div>
         </nav>
-        <div class="main">
+        <div class="main ">
             <div class="mainText">
-                <h1>Foodsy A Place for all the foodies :)</h1>
-                <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-<p style="font-family: 'Roboto Slab', serif;">Welcome to <strong>THE FOODSY</strong>, where every dish is a celebration of flavor and creativity. Nestled in the heart of <em>[Location]</em>, our culinary artisans craft each meal with passion and precision, sourcing only the freshest, locally-sourced ingredients to tantalize your taste buds. Whether you crave the comfort of classic favorites or the excitement of innovative cuisine, our menu offers a symphony of delicious options to satisfy every palate. Join us for an unforgettable dining experience, where exceptional service meets culinary excellence, creating memories one bite at a time.</p>
+               <h1>FoodDsy </h1>
+              
+                
+                <p>A Place for all the foodies where every dish is a celebration of flavor and creativity. </p>
+    
+    <!-- Nestled in the heart of <em>[Location]</em>, our culinary artisans craft each meal with passion and precision, sourcing only the freshest, locally-sourced ingredients to tantalize your taste buds. Whether you crave the comfort of classic favorites or the excitement of innovative cuisine, our menu offers a symphony of delicious options to satisfy every palate. Join us for an unforgettable dining experience, where exceptional service meets culinary excellence, creating memories one bite at a time.</p> -->
 
 
             </div>
-            <img src="assets/images/My first design 1.png" alt="">
+            <img src="assets/images/foodsyhome (2).png" alt="">
         </div>
-        <div style="display: flex;">
-            <h1 style="padding-left:400px ;">TO VIEW THE FULL PAGE PLEASE LOGIN/SIGNIN</h1>
-        </div>
+
+
+        
          
         <div id="food">
+            <h1 style= "text-align: center; padding: 2rem; color: white;">TO VIEW THE FULL PAGE PLEASE LOGIN/SIGNIN</h1>
             
             <div class="foodCard">
                 <div class="card" data-id="1">
