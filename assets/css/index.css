@@ -73,8 +73,8 @@ body {
 
 nav {
   display: flex;
-  position: relative;
-  justify-content: space-around;
+  position: fixed;
+  justify-content: space-between;
   align-items: center;
 
   /* position: fixed; */
@@ -135,12 +135,30 @@ nav {
   background: var(--brown);
   padding-bottom: 2rem;
 }
+nav ul {
+  display: flex;  /* Assuming flexbox is already set */
+  gap: 1.5em;  /* Adjust for desired spacing */;
+}
 
+nav ul li {
+  margin-right: 20px;  /* Add spacing between navigation items */
+}
 nav ul li a {
   color: white;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;  /* Set font family */
+  font-size: 16px;  /* Set font size */
+  color: white;  /* Set text color */
+  text-decoration: none;  /* Remove underline */
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;  /* Add transitions for hover effects */
+  border-radius: 5px;  /* Set default rounded corners */
+  border-color: #ff5c25;
 }
-
+nav ul li a:hover {
+  color: #f57200;  /* Change text color on hover */
+  transform: scale(1.1);  /* Increase size on hover by 10% */
+  border-radius: 0;  /* Remove rounded corners on hover for a squared effect */
+}
 .carousel-inner .carousel-item img {
   width: 10rem;
 }
@@ -182,7 +200,12 @@ ul li a {
   gap: 28px;
 }
 .icons i {
-  font-size: 25px;
+  font-size: 20px;
+  color: #f57200;  /* Change text color on hover */
+  align-content: center;
+  margin-right: 10px;
+  border-radius: 5px;  /* Set default rounded corners */
+  border-color: #ff5c25;
 }
 /* .main {
   display: flex;
