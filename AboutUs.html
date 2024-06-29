@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
-
-    <title>About Us</title>
-    <link rel="stylesheet" href="assets/css/AboutUs.css" />
-  </head>
-  <body>
-    <header>
-      <h1>About Us</h1>
-    </header>
-    <div class="container">
-      <img src="assets/images/img.jpg" alt="food" />
-      <div class="about-details">
-        <span>Welcome to</span>
-        <h2>Our Food Journey</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
+  <title>About Us</title>
+  <link rel="stylesheet" href="assets/css/AboutUs.css" />
+</head>
+<body>
+  <section class="about-us-title-container">
+    <h2 class="section-title-about-us">About Us</h2>
+  </section>
+  
+  <section class="about-us section bd-container" id="about-us">
+    <div class="about-us__container bd-grid">
+      <div class="about-us__img">
+        <img src="./assets/images/about_us_img.png" alt="About Us Image" />
+      </div>
+      <div class="about-us__description">
         <p>
-          We are passionate about bringing the finest culinary experiences to
-          your table. Our journey started with a vision to celebrate the
-          diversity of flavors and traditions that make food a universal
-          language of joy. From farm-fresh ingredients to expertly crafted
-          recipes, we strive to deliver exceptional taste and quality in every
-          dish. Whether you're exploring new tastes or savoring timeless
-          classics, join us on a flavorful adventure that celebrates the
-          artistry and love we pour into each plate.
+          Welcome to FoodDsy!<br>We are committed to providing an exceptional dining experience with our fine selection of dishes and top-notch service. Whether you choose to dine in, order online, or explore our diverse menu, we ensure a memorable culinary journey. Join us and indulge in the best we have to offer.
         </p>
-        <button class="btn">Learn More</button>
       </div>
     </div>
-  </body>
+  </section>
+
+  <section class="services section bd-container" id="services">
+    <h2 class="section-title">Our amazing services</h2>
+
+    <div class="services__container bd-grid">
+      <div class="services__content">
+        <img src="./assets/images/dine in.png" width="50%" height="50%" style="border-radius: 6px;"  />
+        <h3 class="services__title">Dine In</h3>
+        <p class="services__description">
+          Experience the best in fine dining with our elegant and comfortable in-house service. Our expertly crafted menu features a variety of delicious dishes made from the freshest ingredients, designed to satisfy every palate.
+        </p>
+      </div>
+
+      <div class="services__content">
+        <img src="./assets/images/food delivery.png" width="60%" height="50%" style="border-radius: 6px;"  />
+        <h3 class="services__title">Online Food Order</h3>
+        <p class="services__description">
+          Stay in the comfort of your home and savor the deliciousness of our expertly prepared meals, delivered promptly and with care. Whether you're craving a quick bite or planning a meal for the family, we've got you covered with our reliable and efficient service.
+        </p>
+      </div>
+
+      <div class="services__content">
+        <img src="./assets/images/multi cuisine.png" width="50%" height="50%" style="border-radius: 6px;"  />
+        <h3 class="services__title">Multiple Cuisines</h3>
+        <p class="services__description">
+          Indulge in a culinary journey with our diverse selection of cuisines from around the globe. From traditional flavors to modern interpretations, our menu showcases a rich tapestry of tastes to satisfy every craving.
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
 </html>
