@@ -1,82 +1,166 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Baloo 2", cursive;
+:root {
+  --brown: #282421;
+  --beige: #cdc6ba;
 }
 
 body {
-    background-color: #f7f7f7; 
+  background-color: var(--beige);
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    background-color: #e6c651; 
-    padding: 20px;
-    text-align: center;
+.about-us-title-container {
+  width: 100%;
+  background-color: var(--brown);
+  padding: 0.5rem 0;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-header h1 {
-    color: #fff; 
-    font-size: 36px; 
+.section-title-about-us {
+  color: white;
+  font-size: 2.2rem;
 }
 
-.container {
-    display: flex;
+.section-subtitle {
+  display: block;
+  font-size: 2rem;
+  color: var(--brown);
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--brown);
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  margin-left:20px;
+}
+
+.about-us__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.about-us__img {
+  flex: 1 1 45%;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.about-us__img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.about-us__description {
+  flex: 1 1 45%;
+  color: var(--brown);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.services__container {
+  display: grid;
+  row-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.services__content {
+  text-align: center;
+  padding: 1rem;
+  background-color: #b2a795;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: var(--brown);
+}
+
+.services__content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.services__title {
+  font-size: 1.4rem;
+  color: var(--brown);
+  margin-bottom: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.services__description {
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  color: var(--brown);
+  font-family: 'Lato', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us__container {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 4rem auto;
-    padding: 40px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    height: 600px;
-    max-width: 1000px; 
-    background-color: #fff; 
+  }
+
+  .about-us__description {
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    line-height: 1.5;
+  }
+
+  .services__container {
+    grid-template-columns: 1fr;
+  }
+
+  .services__content {
+    padding: 1rem 0.5rem;
+  }
+
+  .services__description {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
 }
 
-.container img {
-    height: 100%;
-    width: auto;
-    border-radius: 20px;
-}
+@media screen and (max-width: 480px) {
+  .section-title-about-us, .section-title {
+    font-size: 1.5rem;
+  }
 
-.about-details {
-    margin: 0 45px;
-}
+  .about-us__description {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
 
-.about-details span {
-    color: #eaaf4f; 
-    font-weight: bold;
-}
+  .services__title {
+    font-size: 1.2rem;
+  }
 
-.about-details h2 {
-    font-family: "Potta One";
-    font-weight: 100;
-    font-size: 36px; 
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    color: #333; 
-}
-
-.about-details p {
-    color: #666; 
-    font-size: 18px; 
-    line-height: 1.5; 
-}
-
-.btn {
-    margin: 25px 0; 
-    padding: 12px 24px; 
-    background-color: #ff5555; 
-    border: none;
-    border-radius: 10px;
-    letter-spacing: 1px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #f2d12b; 
+  .services__description {
+    font-size: 0.8rem;
+  }
 }
