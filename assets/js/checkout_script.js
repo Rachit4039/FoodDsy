@@ -1,5 +1,6 @@
 // Retrieve the cart data from localStorage
 const carts = JSON.parse(localStorage.getItem('cart')) || [];
+console.log(carts);
 const listProducts = [
   {
     "id":1,
@@ -95,10 +96,14 @@ const calculateTotalAmount = () => {
 
 // Call the function to get the total amount
 const totalAmount = calculateTotalAmount();
-console.log('Total Amount:', totalAmount);
+console.log('Total Amt:', totalAmount);
 
 // Example usage in a button click event (assuming you have a confirm button with id 'confirm-btn')
 document.getElementById('confirm-btn').addEventListener('click', function() {
+
+   const totalAmount = calculateTotalAmount();
+   console.log('Total:', totalAmount)
+
   // Get the selected delivery option
   const selectedOption = document.getElementById('delivery-option').value;
 
