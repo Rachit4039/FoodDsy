@@ -1,126 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.container{
-    min-height: 100vh;
-    background: #08071d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url("https://wallpapers.com/images/hd/best-food-background-5uauuazwteuppuke.jpg") no-repeat center center/cover;
+.cd__main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://i.pinimg.com/564x/7c/bd/24/7cbd24eb055ffcc727a448c997c929a6.jpg) !important;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.container form{
-    width: 670px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-    border-radius: 15px;
-    background: rgba(9, 9, 9, 0.1);
-    backdrop-filter: blur(10px);
-    flex-wrap: wrap;
+.cd__main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
 }
 
-.container form h1{
-    color: #090909;
-    font-weight: 500;
-    margin-top: 20px;
-    width: 500px;
-    text-align: center;
+section {
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.container form input{
-    width: 290px;
-    height: 40px;
-    padding-left: 10px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    background: none;
-    border-bottom: 2px solid #060606;
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.container form input::placeholder{
-    color: #090909;
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-.container form #lastName,
-.container form #mobile{
-    margin-left: 20px;
+.section-header h2 {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
-.container form h4{
-    color: #0c0c0c;
-    font-weight: 300;
-    width: 600px;
-    margin-top: 20px;
+.section-header p {
+  color: #FFF;
 }
 
-.container form textarea{
-    background: none;
-    border: none;
-    border-bottom: 2px solid #090909;
-    color: #080808;
-    font-weight: 200;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-    min-width: 600px;
-    max-width: 600px;
-    min-height: 80px;
-    max-height: 80px;
+.row  {
+  display: flex;
+  flwx-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-textarea::-webkit-scrollbar{
-    width: 1em;
+.contact-info {
+  width: 50%;
 }
 
-textarea::-webkit-scrollbar-thumb{
-    background-color: rgba(7, 7, 7, 0.713);
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
 }
 
-.container form #button{
-    border: none;
-    background: #fff;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    color: #080808;
-    width: 100px;
-    padding: 0;
-    margin-right: 500px;
-    margin-bottom: 30px;
-    transition: 0.3s;
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 50%;
 }
 
-.container form #button:hover{
-    opacity: 0.7;
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
 }
 
-.message-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #4CAF50; /* Green background color */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    z-index: 1000; /* Ensure it's above other content */
-    display: none; /* Initially hidden */
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: #1da9c0;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  color: #FFF;
+  font-size: 1em;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"]
+{
+  width: 100%;
+  background: #00bcd4;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #00bcd4;
+  transition: 0.5s;
+}
+
+.contact-form .input-box input[type="submit"]:hover
+{
+  background: #FFF;
+  color: #00bcd4;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
-
-
-
-
-
   
+  .row {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+}
