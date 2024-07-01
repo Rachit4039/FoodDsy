@@ -1,32 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/images/favicon.png" type="image/png" />
-    <title>Contact Us - Food Website</title>
-    <link rel="stylesheet" href="assets/css/contactus.css" />
-  </head>
-  <body>
-    <!-- Message Element -->
-    <div id="messagePopup" class="message-popup">
-      Your message has been submitted!
-    </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="CodeHim">
+      <title>Contact Us Page</title>
+      <link rel="stylesheet" href="./assets/css/contactus.css">
+      <link rel="stylesheet" href="./css/demo.css">
+      <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+    
+   </head>
+   <body>
+      <header class="cd__intro">
+         <div class="cd__action">
+            <a href="https://www.codehim.com/html5-css3/contact-us-page-design-in-html-cod" class="cd__btn back"></a>
+         </div>
+      </header>
 
-    <main>
+      <main class="cd__main">
+         <section>
+    
+    <div class="section-header">
       <div class="container">
-        <form id="contactForm">
-          <h1>Contact Us Form</h1>
-          <input type="text" id="firstName" placeholder="First Name" required />
-          <input type="text" id="lastName" placeholder="Last Name" required />
-          <input type="email" id="email" placeholder="Email" required />
-          <input type="text" id="mobile" placeholder="Mobile" required />
-          <h4>Type Your Message Here...</h4>
-          <textarea required></textarea>
-          <input type="submit" value="Send" id="button" />
-        </form>
+        <h2>Contact Us</h2>
+        <p>
+          Welcome to our Contact Us page! Whether you have questions, feedback, or simply want to share your foodie experiences, we’re here to help. Every dish at our place is a celebration of flavor and creativity, crafted with passion and care. Reach out to us and let’s savor the culinary journey together!</p>
       </div>
-    </main>
-    <script src="assets/js/contactus.js"></script>
-  </body>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p> <br/></p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p></p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Email</h4>
+             <p>rachit2004.joshi@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form action="" id="contact-form">
+            <h2>Send Message</h2>
+            <div class="input-box">
+              <input type="text" required="true" name="">
+              <span>Full Name</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="email" required="true" name="">
+              <span>Email</span>
+            </div>
+            
+            <div class="input-box">
+              <textarea required="true" name=""></textarea>
+              <span>Type your Message...</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="submit" value="Send" name="">
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+      </main>
+      <script src="./js/contactus.js"></script>
+   </body>
 </html>
