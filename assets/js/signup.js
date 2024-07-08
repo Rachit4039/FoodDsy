@@ -46,7 +46,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         // Show success message and redirect to login page
         showAlert('Registration successful! Redirecting to login page...', 'success');
         setTimeout(function() {
-            window.location.href = 'login.html';
+            window.location.href = 'Home.html';
         }, 2000);
     }
 });
