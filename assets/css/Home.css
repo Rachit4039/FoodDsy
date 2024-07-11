@@ -550,14 +550,17 @@ p.phone {
   display: grid;
   grid-template-rows: 70px 1fr 70px;
   transition: inset 0.5s ease-in-out;
+  z-index: 1000;
 }
 body.showCart .carTab {
   inset: 0 0 0 auto;
 }
 .carTab h1 {
-  padding: 20px;
+  
   margin: 0;
   font-weight: 300;
+  text-align: center;
+  font-family: sans-serif;
 }
 .carTab .btn {
   display: grid;
@@ -565,15 +568,28 @@ body.showCart .carTab {
   height: 50px;
 }
 .carTab .btn button {
-  background-color: #ffffff;
+  /* background-color: #ffffff;
   border: none;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
   margin: 3px;
-  border-radius: 5px;
+  border-radius: 5px; */
+  background-color: var(--beige);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+.carTab .btn button:hover{
+    background-color: #45a049;
 }
 .carTab .ListCart .item img {
   width: 100%;
+}
+.carTab .ListCart .item hr{
+   width: 100%;
 }
 .carTab .ListCart .item {
   display: grid;
@@ -581,23 +597,43 @@ body.showCart .carTab {
   gap: 10px;
   text-align: center;
   align-items: center;
+  margin-bottom: 2px;
+}
+.carTab .totalCart{
+  background-color: #d9bd81;
+  text-align: center;
+}
+.carTab .totalCart .totalSpan{
+  padding-left: 30px;
+}
+.carTab .ListCart .item .name{
+  font-family: sans-serif;
+}
+.carTab .line{
+  position: relative;
+  top: 20px;
+  opacity: 1;
+  height: 3px;
+  background: black;
+  margin-bottom: 70px;
 }
 .ListCart .quantity span {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-color: #eee;
-  color: #555;
+  background-color: #d9bd81;
+  color: black;
   border-radius: 50%;
   cursor: pointer;
 }
 .ListCart .quantity span:nth-child(2) {
   background-color: transparent;
-  color: #eee;
+  color: black;
 }
 
 .ListCart .item:nth-child(even) {
   background-color: #eee1;
+  margin-bottom: 2px;
 }
 
 .ListCart {
