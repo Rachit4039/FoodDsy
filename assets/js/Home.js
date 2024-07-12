@@ -2,18 +2,18 @@ let container = document.querySelector(".container");
 let cards = document.querySelectorAll(".card");
 
 let products = [
-  { "id": 1, "name": "Burger", "price": 100, "image": "mex.jpg" },
-  { "id": 2, "name": "Tacos", "price": 75, "image": "mexican-tacos-with-beef-beans-tomato-sauce-salsa.jpg" },
-  { "id": 3, "name": "Pizza(Tomato and Corn)", "price": 200, "image": "fd3.jpg" },
-  { "id": 4, "name": "Sandwich", "price": 150, "image": "panini-sandwich-with-ham-cheese-tomato-arugula-black-slate-background.jpg" },
-  { "id": 5, "name": "Choco Lava Cake", "price": 200, "image": "closeup-shot-chocolate-cake-wooden-table.jpg" },
-  { "id": 6, "name": "Cappuccino", "price": 100, "image": "cup-three-layered-coffee-dark.jpg" },
-  { "id": 7, "name": "Brownie", "price": 150, "image": "fd5.jpg" },
-  { "id": 8, "name": "Veggie Roll", "price": 150, "image": "side-view-shawarma-with-fried-potatoes-board-cookware.jpg" },
-  { "id": 9, "name": "Idli", "price": 150, "image": "freshly-cooked-meal-pork-rice-generated-by-ai.jpg" },
-  { "id": 10, "name": "Golgappa(6 pieces)", "price": 30, "image": "panipuri_gupchup_indian_food_0.jpg" },
-  { "id": 11, "name": "Gulab Gamun", "price": 50, "image": "indian_sweet_gulab_jamun.jpg" },
-  { "id": 12, "name": "Chowmein", "price": 70, "image": "delicious-asian-noodles-concept.jpg" }
+  { "id": 1, "name": "Burger", "price": 100, "image": "assets/images/fd1.jpg" },
+  { "id": 2, "name": "Tacos", "price": 75, "image": "assets/images/mexican-tacos-with-beef-beans-tomato-sauce-salsa.jpg" },
+  { "id": 3, "name": "Pizza(Tomato and Corn)", "price": 200, "image": "assets/images/fd3.jpg" },
+  { "id": 4, "name": "Sandwich", "price": 150, "image": "assets/images/panini-sandwich-with-ham-cheese-tomato-arugula-black-slate-background.jpg" },
+  { "id": 5, "name": "Choco Lava Cake", "price": 200, "image": "assets/images/closeup-shot-chocolate-cake-wooden-table.jpg" },
+  { "id": 6, "name": "Cappuccino", "price": 100, "image": "assets/images/cup-three-layered-coffee-dark.jpg" },
+  { "id": 7, "name": "Brownie", "price": 150, "image": "assets/images/fd5.jpg" },
+  { "id": 8, "name": "Veggie Roll", "price": 150, "image": "assets/images/side-view-shawarma-with-fried-potatoes-board-cookware.jpg" },
+  { "id": 9, "name": "Idli", "price": 150, "image": "assets/images/freshly-cooked-meal-pork-rice-generated-by-ai.jpg" },
+  { "id": 10, "name": "Golgappa(6 pieces)", "price": 30, "image": "assets/images/panipuri_gupchup_indian_food_0.jpg" },
+  { "id": 11, "name": "Gulab Gamun", "price": 50, "image": "assets/images/indian_sweet_gulab_jamun.jpg" },
+  { "id": 12, "name": "Chowmein", "price": 70, "image": "assets/images/delicious-asian-noodles-concept.jpg" }
 ];
 
 let listProducts = [];
@@ -97,6 +97,7 @@ const addCartToHTML = () => {
           <span>${cart.quantity}</span>
           <span class="plus">></span>
         </div>
+        <hr><hr><hr><hr>
       `;
       listCartHTML.append(newCart);
     });
@@ -160,7 +161,7 @@ function calculateTotalPrice() {
 function displayTotalPrice() {
   const totalPrice = calculateTotalPrice();
   const totalPriceDiv = document.getElementsByClassName('totalSpan')[0];
-  totalPriceDiv.textContent = `₹ ${totalPrice}`;
+  totalPriceDiv.textContent = `Total ₹: ${totalPrice}`;
 }
 
 displayTotalPrice();
