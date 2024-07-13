@@ -165,3 +165,21 @@ function displayTotalPrice() {
 }
 
 displayTotalPrice();
+
+
+var isLoggedIn=false;
+function displayname(){
+  var userNameDisplay = document.querySelector('.user-name'); // Assuming this is where you want to display the user's name
+  var loggedInUser = sessionStorage.getItem('loggedInUser');
+  if (loggedInUser) {
+    // If user is logged in
+    var user = JSON.parse(loggedInUser);
+    userNameDisplay.textContent = user.username;
+}
+else{
+  userNameDisplay.textContent = ''; 
+}
+
+}
+
+displayname();

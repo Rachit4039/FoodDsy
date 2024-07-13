@@ -1,3 +1,14 @@
+const images = document.querySelectorAll('.transition-image');
+let currentImageIndex = 0;
+
+function showNextImage() {
+    images[currentImageIndex].style.opacity = 0;
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    images[currentImageIndex].style.opacity = 1;
+}
+
+setInterval(showNextImage, 3000);
+
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -43,6 +54,9 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         // Save the updated list of users to localStorage
         localStorage.setItem('users', JSON.stringify(existingUsers));
 
+        // Store user session in sessionStorage after registration
+        sessionStorage.setItem('loggedInUser', JSON.stringify(newUser));
+
         // Show success message and redirect to login page
         showAlert('Registration successful! Redirecting to main page...', 'success');
         setTimeout(function() {
@@ -66,13 +80,3 @@ function validateEmail(email) {
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
-const images = document.querySelectorAll('.transition-image');
-        let currentImageIndex = 0;
-
-        function showNextImage() {
-            images[currentImageIndex].style.opacity = 0;
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].style.opacity = 1;
-        }
-
-        setInterval(showNextImage, 3000);
