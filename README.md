@@ -1,21 +1,20 @@
 <div align="center">
+
+  <h1 align="center">FoodDsy</h2>
   
   ![GitHub repo size](https://img.shields.io/github/repo-size/Rachit4039/FoodDsy)
   ![GitHub stars](https://img.shields.io/github/stars/Rachit4039/FoodDsy?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/Rachit4039/FoodDsy?style=social)
 
-  <br />
-  <br />
-
-  <h2 align="center">FoodDsy</h2>
+</div>
 
   Welcome to THE FOODSY, where culinary artistry meets exceptional dining. THE FOODSY is more than just a restaurant; it's a celebration of flavour and creativity. Our talented chefs, driven by passion and precision, curate each dish using only the freshest, locally sourced ingredients. Whether you're craving the comfort of classic favourites or the excitement of innovative cuisine, our menu offers a delightful array of options to suit every palate.
 
-  <a href="https://rachit4039.github.io/FoodDsy/"><strong>➥ Live Demo</strong></a>
-
+<div align="center">
+<a href="https://rachit4039.github.io/FoodDsy/"><strong>➥ Live Demo</strong></a>
 </div>
 
-<br />
+---
 
 ### Demo Screenshots
 
@@ -30,23 +29,31 @@ Before you begin, ensure you have met the following requirements:
 
 ### Run Locally
 
-To run **FoodDsy** locally, run this command on your git bash:
+- To run **FoodDsy** locally, run this command on your git bash:
 
-Linux and macOS:
 
-```bash
-sudo git clone https://github.com/Rachit4039/FoodDsy
-```
+  - `Windows`
+    ```bash
+    git clone https://github.com/Rachit4039/FoodDsy.git
+    cd ./FoodDsy
+    ```
 
-Windows:
+  - `Linux` and `MacOS`:
 
-```bash
-git clone https://github.com/Rachit4039/FoodDsy
-```
+    ```bash
+    sudo git clone https://github.com/Rachit4039/FoodDsy
+    cd ./FoodDsy
+    ```
+ - In your code editor, you can use extenstions like `Live-Server` to run your build in localhost, or open `index.html` file, press `right-click` and select `Open with Live Server`.
+  
+ - Install the `live-server` extenstion, then press `Go-Live` button in the bottom right cornor of the editor.
+
+
+
 
 ### License
 
-This project is **free to use** and does not contain any license.
+This project is **`free to use`** and does not contain any license.
 
 
 ---
@@ -72,7 +79,14 @@ This project is **free to use** and does not contain any license.
         </tr>
     </table>
 
----
+
+## 👤 Contributors 
+<center>
+<div>
+<a href="https://github.com/Rachit4039/FoodDsy/graphs/contributors">
+  <img width="100%" src="https://contrib.rocks/image?repo=Rachit4039/FoodDsy" />
+</a>
+</div>
 
 $~$
 
@@ -84,3 +98,6 @@ $~$
   <h3>Show some &nbsp;❤️&nbsp; by &nbsp;🌟&nbsp; this repository!</h3>
   <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em>Lets build <b>a cool community!</b></em>
 </div>
+<br>
+
+![Line](https://user-images.githubusercontent.com/85225156/171937799-8fc9e255-9889-4642-9c92-6df85fb86e82.gif)
