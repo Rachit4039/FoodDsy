@@ -76,14 +76,13 @@ nav {
   position: fixed;
   justify-content: space-between;
   align-items: center;
-
-  /* position: fixed; */
-  top: 0%;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: var(--brown);
-
   height: 70px;
-  /* box-shadow: 1px 3px 3px 3px rgb(216, 216, 216); */
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
 .b {
