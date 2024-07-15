@@ -370,6 +370,7 @@ p.phone {
   color: #ffffff;
   font-size: 18px;
   transition: color 0.3s;
+  margin-left: 0;
 }
 
 .footer-col ul li a:hover {
@@ -402,6 +403,7 @@ p.phone {
 
 .footer-col ul li {
   margin: 10px;
+  margin-left: 0;
 }
 
 .footer-col form {
