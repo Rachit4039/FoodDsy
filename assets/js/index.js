@@ -38,21 +38,34 @@ container.style.display="none";
 // Assuming this variable tracks the login state, set it to true when the user is logged in
 var isLoggedIn = false;
 
-// Function to toggle the visibility of login button and user icon
 function toggleLoginButton() {
     var loginBtn = document.querySelector('.login-btn');
     var userIcon = document.querySelector('.fa-user'); // Assuming this is your user icon element
+    var userNameDisplay = document.querySelector('.user-name'); // Assuming this is where you want to display the user's name
 
-    if (isLoggedIn) {
-        // If user is logged in, hide the login button and show the user icon
+    // Check if there's a logged-in user in sessionStorage
+    var loggedInUser = sessionStorage.getItem('loggedInUser');
+
+    if (loggedInUser) {
+        // If user is logged in
+        var user = JSON.parse(loggedInUser);
+        
+        // Display the user's name
+        userNameDisplay.textContent = user.name;
+
+        // Hide the login button and show the user icon
         loginBtn.style.display = 'none';
         userIcon.style.display = 'inline-block';
     } else {
-        // If user is not logged in, show the login button and hide the user icon
+        // If no user is logged in
+        userNameDisplay.textContent = ''; // Clear the user's name display
+
+        // Show the login button and hide the user icon
         loginBtn.style.display = 'inline-block';
         userIcon.style.display = 'none';
     }
 }
+
 
 // Call the function initially
 toggleLoginButton();
