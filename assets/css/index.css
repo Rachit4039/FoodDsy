@@ -672,3 +672,19 @@ body.showCart .carTab {
   font-weight: 700;
   margin-right: auto;
 }
+
+
+.topbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 11px;
+  right: 29px;
+  text-decoration: none;
+  background-color: #282421;
+  text-align: center;
+  line-height: 50px;
+  user-select: none;
+  font-size: 22px;
+  border-radius: 50%
+}

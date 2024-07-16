@@ -198,8 +198,32 @@
                 </div>
             </div>
         </div>
+
+        <div id="topbtn" class="topbtn">
+            <a class="gotopbtn" href="#"><i class="fa-solid fa-angles-up"></i></a>
+        </div>
     </footer>
      
 
     </div>
+</body>
+<script>
+    const topButton = document.getElementById("topbtn");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    };
+    topButton.onclick = function (event) {
+        event.preventDefault(); 
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  
+        });
+    };
+</script>
+</html>
+
 
