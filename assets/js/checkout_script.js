@@ -1,5 +1,7 @@
 // Retrieve the cart data from localStorage
-const carts = JSON.parse(localStorage.getItem('cart')) || [];
+const loggedInUser = sessionStorage.getItem('loggedInUser');
+const user = JSON.parse(loggedInUser);
+const carts = JSON.parse(sessionStorage.getItem(`cart_${user.username}`)) || [];
 console.log(carts);
 const listProducts = [
   {
