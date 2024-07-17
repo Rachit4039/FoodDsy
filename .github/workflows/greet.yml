@@ -1,0 +1,52 @@
+name: Greet New Issue or PR
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add Welcome Comment for Issues
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.payload.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const body = `Thank you for opening an issue! 🎉 Please make sure to:
+            - Read our [CONTRIBUTING.md](https://github.com/${owner}/${repo}/blob/main/CONTRIBUTING.md) guide.
+            - Star our repo ⭐ if you find it useful.
+            Your contribution is appreciated!`;
+            github.rest.issues.createComment({
+              issue_number: issue_number,
+              owner: owner,
+              repo: repo,
+              body: body
+            });
+
+      - name: Add Welcome Comment for PRs
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const pr_number = context.payload.pull_request.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const body = `Thank you for opening a pull request! 🎉 Please make sure to:
+            - Read our [CONTRIBUTING.md](https://github.com/${owner}/${repo}/blob/main/CONTRIBUTING.md) guide.
+            - Star our repo ⭐ if you find it useful.
+            Your contribution is appreciated!`;
+            github.rest.issues.createComment({
+              issue_number: pr_number,
+              owner: owner,
+              repo: repo,
+              body: body
+            });
