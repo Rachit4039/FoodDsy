@@ -67,7 +67,17 @@ listProductHTML.addEventListener('click', (event) => {
 });
 
 const addCartToMemory = () => {
-  localStorage.setItem('cart', JSON.stringify(carts));
+  const loggedInUser = sessionStorage.getItem('loggedInUser');
+
+  if (loggedInUser) {
+    // Parse the user object
+    const user = JSON.parse(loggedInUser);
+    
+    // Store the cart items in sessionStorage under the user's identifier
+    sessionStorage.setItem(`cart_${user.username}`, JSON.stringify(carts));
+  } else {
+    console.error('No user is logged in. Cannot save cart to session storage.');
+  }
 };
 
 const addCartToHTML = () => {
@@ -144,9 +154,21 @@ const changeQuantity = (productId, type) => {
 };
 
 const initApp = () => {
-  if (localStorage.getItem('cart')) {
-    carts = JSON.parse(localStorage.getItem('cart'));
-    addCartToHTML();
+  const loggedInUser = sessionStorage.getItem('loggedInUser');
+
+  if (loggedInUser) {
+    // Parse the user object
+    const user = JSON.parse(loggedInUser);
+
+    // Retrieve the user's cart from sessionStorage
+    const userCart = sessionStorage.getItem(`cart_${user.username}`);
+
+    if (userCart) {
+      carts = JSON.parse(userCart);
+      addCartToHTML();
+    }
+  } else {
+    console.error('No user is logged in. Cannot initialize cart from session storage.');
   }
 };
 
