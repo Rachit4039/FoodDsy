@@ -1,7 +1,7 @@
 <div align="center">
 
   <h1 align="center">FoodDsy</h2>
-  
+   
   ![GitHub repo size](https://img.shields.io/github/repo-size/Rachit4039/FoodDsy)
   ![GitHub stars](https://img.shields.io/github/stars/Rachit4039/FoodDsy?style=social)
   ![GitHub forks](https://img.shields.io/github/forks/Rachit4039/FoodDsy?style=social)
